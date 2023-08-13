@@ -2,11 +2,10 @@
 # SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
 
-# Unignoring items: https://stackoverflow.com/questions/6011521/opposite-of-gitignore-file/6011532#6011532
-
-
 # Start from ignoring everything (except for the already added files):
 #/*
 
 # Unignore all files in any subdir:
 #!*/
+
+# Via: https://stackoverflow.com/questions/6011521/opposite-of-gitignore-file/6011532#6011532
