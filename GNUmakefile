@@ -2,3 +2,6 @@
 # SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
 A = An introductory description of this Makefile (a TODO).
+
+desc:
+	@echo "${A}"
