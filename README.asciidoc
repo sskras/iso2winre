@@ -5,9 +5,9 @@
 
 You could use this repo (and its' ancestors) as a template to generate a new repo, eg `https://github.com/USER/REPO`
 
-However the commit history will be squashed into the new commit.
+However the original commit history will be squashed into a new commit.
 
-To retain the original history, you could execute in the empty working dir:
+To retain this history, you could execute this in the empty working dir:
 ```sh
 git clone https://github.com/mirrors-git/TEMPLET-05-Added-GNUmakefile.asciidoc.git .
 git remote set-url origin https://github.com/USER/REPO.git
