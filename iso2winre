@@ -6,3 +6,5 @@
 # - Mount a Windows Vista+ ISO image,
 # - then mount the inner `INSTALL.{ESD,WIM}`
 # - and access the `WinRE.wim` image stored there.
+
+set -e
