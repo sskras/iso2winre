@@ -3,4 +3,6 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 # SPDX-FileCopyrightText: 2025 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-# Mount ISO file, mount the inner ESD or WIM file, and access the stored `WinRE.wim` file.
+# - Mount a Windows Vista+ ISO image,
+# - then mount the inner `INSTALL.{ESD,WIM}`
+# - and access the `WinRE.wim` image stored there.
