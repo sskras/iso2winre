@@ -8,3 +8,8 @@
 # - and access the `WinRE.wim` image stored there.
 
 set -e
+
+iso_file="/C/Users/Renato/Downloads/18363 .iso"
+iso_full=$(cygpath -m "${iso_file}")
+
+powershell "Get-DiskImage -ImagePath \"${iso_full}\""
