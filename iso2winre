@@ -9,7 +9,7 @@
 
 set -e
 
-iso_file="/C/Users/Renato/Downloads/18363 .iso"
+iso_file=${1}
 iso_full=$(cygpath -m "${iso_file}")
 
 powershell "Get-DiskImage -ImagePath \"${iso_full}\""
