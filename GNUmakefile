@@ -41,4 +41,7 @@ desc:
 	@echo "${A}"
 
 sample:
-	@./iso2winre /C/Users/Renato/Downloads/18362*.iso | sed 's/\r//' | tee iso2winre-sample.output
+	@./iso2winre /C/Users/Renato/Downloads/18362*.iso   \
+	    | sed 's/\r//'                                  \
+	    | tee iso2winre-sample.output                   \
+
