@@ -41,7 +41,7 @@ desc:
 	@echo "${A}"
 
 sample:
-	@./iso2winre /C/Users/Renato/Downloads/18362*.iso   \
+	@sh -c "time ./iso2winre /C/Users/Renato/Downloads/18362*.iso" 2>&1 \
 	    | sed 's/\r//'                                  \
 	    | tee iso2winre-sample.output                   \
 
