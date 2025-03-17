@@ -41,4 +41,4 @@ desc:
 	@echo "${A}"
 
 run:
-	@./iso2winre "/C/Users/Renato/Downloads/18363 .iso"
+	@./iso2winre /C/Users/Renato/Downloads/18362*.iso
