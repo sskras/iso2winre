@@ -40,5 +40,5 @@ all:
 desc:
 	@echo "${A}"
 
-run:
+sample:
 	@./iso2winre /C/Users/Renato/Downloads/18362*.iso
