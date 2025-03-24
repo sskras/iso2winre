@@ -27,6 +27,9 @@ P "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object Dev
 _ "Details of the image"
 P "Get-DiskImage -ImagePath '${iso_full}'"
 
+_ "Mount the ISO image"
+P "Mount-DiskImage -ImagePath '${iso_full}' -PassThru"
+
 _ "Final optical drives"
 P "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
 
