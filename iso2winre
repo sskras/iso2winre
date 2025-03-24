@@ -15,7 +15,7 @@ iso_full=$(cygpath -m "${iso_file}")
 echo "- Initial optical drives"
 powershell "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
 
-powershell "Get-DiskImage -ImagePath \"${iso_full}\""
+powershell "Get-DiskImage -ImagePath '${iso_full}'"
 
 echo "- Final optical drives"
 powershell "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
