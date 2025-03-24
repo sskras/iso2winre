@@ -1,4 +1,10 @@
 
+DeviceID Size VolumeName Description
+-------- ---- ---------- -----------
+D:                       CD-ROM Disc
+
+
+
 
 Attached          : False
 BlockSize         : 0
@@ -14,6 +20,6 @@ PSComputerName    :
 
 
 
-real	0m2.803s
-user	0m0.045s
-sys	0m0.093s
+real	0m3.745s
+user	0m0.015s
+sys	0m0.153s

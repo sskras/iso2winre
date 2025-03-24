@@ -12,4 +12,5 @@ set -e
 iso_file=${1}
 iso_full=$(cygpath -m "${iso_file}")
 
+powershell "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
 powershell "Get-DiskImage -ImagePath \"${iso_full}\""
