@@ -43,7 +43,10 @@ desc:
 sample:
 	@sh -c "time                                        \
 	    ./iso2winre                                     \
+	    $$(                                             \
+	      cygpath -m                                    \
 	        /C/Users/Renato/Downloads/18362*.iso        \
+	      )                                             \
 	    " 2>&1                                          \
 	    | sed 's/\r//'                                  \
 	    | tee iso2winre-sample.output                   \

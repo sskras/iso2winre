@@ -19,8 +19,7 @@ function P ()
     powershell "$@"
 }
 
-iso_file=${1}
-iso_full=$(cygpath -m "${iso_file}")
+iso_full=${1}
 
 _ "Initial optical drives"
 P "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
