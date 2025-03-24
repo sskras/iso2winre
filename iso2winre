@@ -17,4 +17,7 @@ powershell "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-O
 
 powershell "Get-DiskImage -ImagePath \"${iso_full}\""
 
+echo "- Final optical drives"
+powershell "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
+
 echo .
