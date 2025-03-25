@@ -42,7 +42,7 @@ desc:
 
 sample:
 	@sh -c "time                                        \
-	    ./iso2winre                                     \
+	    ./iso2winre.ps1                                 \
 	    $$(                                             \
 	      cygpath -m                                    \
 	        /C/Users/Renato/Downloads/18362*.iso        \
