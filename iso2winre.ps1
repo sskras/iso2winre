@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! /usr/bin/env -S powershell -file
 
 # SPDX-License-Identifier: BlueOak-1.0.0
 # SPDX-FileCopyrightText: 2025 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
@@ -9,17 +9,17 @@
 
 set -e
 
-function _ ()
+Function _ ()
 {
-    echo "- $@"
+    echo "- $args"
 }
 
-function P ()
+Function P ()
 {
-    powershell "$@"
+    Invoke-Expression -Command "$args"
 }
 
-iso_full=${1}
+$iso_full=$args
 
 _ "Initial optical drives"
 P "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"

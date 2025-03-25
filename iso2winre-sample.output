@@ -1,3 +1,10 @@
+Set-Variable : Missing an argument for parameter 'Exclude'. Specify a parameter of type 'System.String[]' and try again.
+At C:\msys64\home\Renato\debug\mount-ISO,-mount-ESD-or-WIM,-inpect-WinRE.wim\iso2winre.ps1:10 char:5
++ set -e
++     ~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Variable], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.SetVariableCommand
+ 
 - Initial optical drives
 
 DeviceID Size       VolumeName             Description
@@ -5,52 +12,21 @@ DeviceID Size       VolumeName             Description
 D:                                         CD-ROM Disc
 F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
-
-
+H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 - Details of the image
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM1
-FileSize          : 4439830528
-ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 1
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
+         4439830528                                   
 - Mount the ISO image
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM1
-FileSize          : 4439830528
-ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 1
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
+         4439830528                                   
 - Final optical drives
-
-DeviceID Size       VolumeName             Description
--------- ----       ----------             -----------
 D:                                         CD-ROM Disc
 F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
-
-
+I:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 .
 
-real	0m15.129s
+
+
+real	0m5.139s
 user	0m0.031s
-sys	0m0.137s
+sys	0m0.046s
