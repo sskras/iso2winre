@@ -7,23 +7,18 @@
 # - then mount the inner `INSTALL.{ESD,WIM}`
 # - and access the `WinRE.wim` image stored there.
 
-Function P ()
-{
-    Invoke-Expression -Command "$args"
-}
-
 $iso_full=$args
 
 "- Initial optical drives"
-P "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description"
+Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description
 
 "- Details of the image"
-P "Get-DiskImage -ImagePath '${iso_full}' | fl"
+Get-DiskImage -ImagePath ${iso_full} | fl
 
 "- Mount the ISO image"
-P "Mount-DiskImage -ImagePath '${iso_full}' -PassThru"
+Mount-DiskImage -ImagePath ${iso_full} -PassThru
 
 "- Final optical drives"
-P "Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft"
+Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft
 
 echo .
