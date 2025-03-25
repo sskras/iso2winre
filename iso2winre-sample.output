@@ -4,6 +4,7 @@ DeviceID Size       VolumeName             Description
 -------- ----       ----------             -----------
 D:                                         CD-ROM Disc
 F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 - Details of the image
@@ -45,10 +46,11 @@ DeviceID Size       VolumeName             Description
 D:                                         CD-ROM Disc
 F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 .
 
-real	0m15.632s
-user	0m0.046s
-sys	0m0.185s
+real	0m15.129s
+user	0m0.031s
+sys	0m0.137s
