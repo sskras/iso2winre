@@ -21,4 +21,4 @@ Mount-DiskImage -ImagePath ${iso_full} -PassThru
 "- Final optical drives"
 Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft
 
-echo .
+"."
