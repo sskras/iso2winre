@@ -39,13 +39,14 @@ PSComputerName    :
 
 - Final optical drives
 
-DeviceID Size VolumeName Description
--------- ---- ---------- -----------
-D:                       CD-ROM Disc
+DeviceID Size       VolumeName             Description
+-------- ----       ----------             -----------
+D:                                         CD-ROM Disc
+F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 .
 
-real	0m7.249s
-user	0m0.030s
-sys	0m0.214s
+real	0m15.447s
+user	0m0.045s
+sys	0m0.184s
