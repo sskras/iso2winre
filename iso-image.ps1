@@ -36,6 +36,8 @@ if ($cleanup)
 "- Cleaning up virtual drives mounted from the image:"
   $init_vol  = $iso | Get-Volume
   $init_vol | ft
+  $iso_label = $init_vol.FileSystemLabel
+  $iso_label
 }
 
 "."
