@@ -11,6 +11,7 @@ J:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 K:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 L:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 M:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+O:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 - Details of the image
 
 
@@ -59,17 +60,18 @@ K:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 L:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 M:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 O:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+P:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 - Drive letters diff
 
 InputObject SideIndicator
 ----------- -------------
-          O =>           
+          P =>           
 
 
 .
 
-real	0m3.223s
-user	0m0.015s
-sys	0m0.030s
+real	0m3.228s
+user	0m0.000s
+sys	0m0.077s
