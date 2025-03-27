@@ -38,6 +38,8 @@ if ($cleanup)
   $init_vol | ft
   $iso_label = $init_vol.FileSystemLabel
   $iso_label
+  $all_vols  = Get-Volume -FileSystemLabel $iso_label
+  $all_vols
 }
 
 "."
