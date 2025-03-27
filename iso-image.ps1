@@ -12,6 +12,7 @@
 param
 (
   [switch] $info,
+  [switch] $cleanup,
   [switch] $EOA         # End of Arguments (a virtual argument, not intended to be actually used)
 )
 # Via: https://www.red-gate.com/simple-talk/sysadmin/powershell/how-to-use-parameters-in-powershell-part-ii/#boolean-vs-switch
@@ -26,6 +27,11 @@ if ($info)
 {
 "- Image details:"
 Get-DiskImage -ImagePath $iso_file | fl
+}
+
+if ($cleanup)
+{
+"- Cleaning up virtual drives mounted from the image:"
 }
 
 "."
