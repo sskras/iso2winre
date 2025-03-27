@@ -23,10 +23,12 @@ $iso_file = $args
 Write-Output $iso_file
 ""
 
+$iso = Get-DiskImage -ImagePath $iso_file
+
 if ($info)
 {
 "- Image details:"
-Get-DiskImage -ImagePath $iso_file | fl
+  $iso | fl
 }
 
 if ($cleanup)
