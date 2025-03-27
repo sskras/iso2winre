@@ -9,7 +9,11 @@
 # - mounting an image,
 # - cleaning up virtual drives mounted from an ISO image.
 
-param([switch] $info)
+param
+(
+  [switch] $info,
+  [switch] $EOA         # End of Arguments (a virtual argument, not intended to be actually used)
+)
 # Via: https://www.red-gate.com/simple-talk/sysadmin/powershell/how-to-use-parameters-in-powershell-part-ii/#boolean-vs-switch
 
 $iso_file = $args
