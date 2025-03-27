@@ -13,5 +13,9 @@ $iso_file = $args
 
 "- Processing the image:"
 Write-Output $iso_file
+""
+
+"- Image details:"
+Get-DiskImage -ImagePath $iso_file | fl
 
 "."
