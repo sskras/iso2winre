@@ -23,7 +23,7 @@ $iso_file = $args
 Write-Output $iso_file
 ""
 
-$iso = Get-DiskImage -ImagePath $iso_file
+$iso = Get-DiskImage -ImagePath $iso_file | Get-Volume | Get-DiskImage
 
 if ($info)
 {
@@ -47,7 +47,7 @@ if ($cleanup)
     $img_path = $image.ImagePath
     $img_path
 
-    if ($img_path -ne $iso_file)
+    if ($image.ImagePath -ne $iso.ImagePath)
     {
       "Skipping image with different paths: ${img_path}"
       continue
