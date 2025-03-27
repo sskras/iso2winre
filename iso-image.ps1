@@ -44,7 +44,8 @@ if ($cleanup)
   foreach ($vol in $all_vols)
   {
     $image = $vol | Get-DiskImage
-    $image
+    $img_path = $image.ImagePath
+    $img_path
   }
 }
 
