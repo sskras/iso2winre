@@ -27,13 +27,13 @@ $iso = Get-DiskImage -ImagePath $iso_file | Get-Volume | Get-DiskImage
 
 if ($info)
 {
-"- Image details:"
+  "- Image details:"
   $iso | fl
 }
 
 if ($cleanup)
 {
-"- Cleaning up virtual drives mounted from the image:"
+  "- Cleaning up virtual drives mounted from the image:"
   $init_vol  = $iso | Get-Volume
   $init_vol | ft
   $iso_label = $init_vol.FileSystemLabel
