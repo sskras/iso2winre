@@ -46,6 +46,12 @@ if ($cleanup)
     $image = $vol | Get-DiskImage
     $img_path = $image.ImagePath
     $img_path
+
+    if ($img_path -ne $iso_file)
+    {
+      "Skipping image with different paths: ${img_path}"
+      continue
+    }
   }
 }
 
