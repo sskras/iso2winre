@@ -8,3 +8,10 @@
 # - checking image details,
 # - mounting an image,
 # - cleaning up virtual drives mounted from an ISO image.
+
+$iso_file = $args
+
+"- Processing the image:"
+Write-Output $iso_file
+
+"."
