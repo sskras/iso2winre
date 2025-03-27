@@ -9,13 +9,19 @@
 # - mounting an image,
 # - cleaning up virtual drives mounted from an ISO image.
 
+param([switch] $info)
+# Via: https://www.red-gate.com/simple-talk/sysadmin/powershell/how-to-use-parameters-in-powershell-part-ii/#boolean-vs-switch
+
 $iso_file = $args
 
 "- Processing the image:"
 Write-Output $iso_file
 ""
 
+if ($info)
+{
 "- Image details:"
 Get-DiskImage -ImagePath $iso_file | fl
+}
 
 "."
