@@ -39,7 +39,7 @@ if ($cleanup)
   $iso_label = $init_vol.FileSystemLabel
   $iso_label
   $all_vols  = Get-Volume -FileSystemLabel $iso_label
-  $all_vols
+  $all_vols | ft
 
   foreach ($vol in $all_vols)
   {
