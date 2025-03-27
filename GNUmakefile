@@ -4,6 +4,9 @@
 A = An introductory description of this Makefile (a TODO).
 
 
+sample_iso = `cygpath -m /C/Users/Renato/Downloads/18362*.iso`
+
+
 all:
 	@echo "${A}"
 	@echo
@@ -50,4 +53,7 @@ sample:
 	    " 2>&1                                          \
 	    | sed 's/\r//'                                  \
 	    | tee iso2winre-sample.output                   \
+
+clean:
+	./iso-image.ps1 ${sample_iso} -cleanup              \
 
