@@ -40,6 +40,12 @@ if ($cleanup)
   $iso_label
   $all_vols  = Get-Volume -FileSystemLabel $iso_label
   $all_vols
+
+  foreach ($vol in $all_vols)
+  {
+    $image = $vol | Get-DiskImage
+    $image
+  }
 }
 
 "."
