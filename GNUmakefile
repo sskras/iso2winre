@@ -56,4 +56,6 @@ sample:
 
 clean:
 	./iso-image.ps1 ${sample_iso} -cleanup              \
+	    2>&1                                            \
+	    | tee make-clean.output                         \
 
