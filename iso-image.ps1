@@ -41,40 +41,11 @@ if ($cleanup)
 
   while ($drive.DevicePath)
   {
-  " * next device path: " + $drive.DevicePath
+    " * next device path: " + $drive.DevicePath
     " * next device dismount: "
-  $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
+    $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
     $drive | fl
 
-  }
-  continue
-
-  " * normalized path of the mounted ISO:"
-  ""
-  $drive = $init_vol | Get-DiskImage
-  $drive.ImagePath
-  ""
-  " * found label:"
-  ""
-  $iso_label = $init_vol.FileSystemLabel
-  $iso_label
-  ""
-  " * all volumes by the label:"
-  $all_vols  = Get-Volume -FileSystemLabel $iso_label
-  $all_vols | ft
-
-  foreach ($vol in $all_vols)
-  {
-    $image = $vol | Get-DiskImage
-    $img_path = $image.ImagePath
-    ""
-    if ($image.ImagePath -ne $drive.ImagePath)
-    {
-      "Skipping image with different paths: '${img_path}'"
-      continue
-    }
-    " * dismounting volume " + $vol.Path
-    Dismount-DiskImage -ImagePath $image.ImagePath | fl
   }
 }
 
