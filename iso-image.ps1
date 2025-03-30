@@ -23,12 +23,12 @@ $iso_file = $args
 Write-Output $iso_file
 ""
 
-$iso = Get-DiskImage -ImagePath $iso_file
+$drive = Get-DiskImage -ImagePath $iso_file
 
 if ($info)
 {
   "- Image details:"
-  $iso | fl
+  $drive | fl
 }
 
 if ($cleanup)
@@ -36,13 +36,13 @@ if ($cleanup)
   "- Cleaning up virtual drives mounted from the image:"
   ""
   " * initial volume:"
-  $init_vol  = $iso | Get-Volume
+  $init_vol  = $drive | Get-Volume
   $init_vol | ft
 
   " * normalized path of the mounted ISO:"
   ""
-  $iso = $init_vol | Get-DiskImage
-  $iso.ImagePath
+  $drive = $init_vol | Get-DiskImage
+  $drive.ImagePath
   ""
   " * found label:"
   ""
@@ -58,7 +58,7 @@ if ($cleanup)
     $image = $vol | Get-DiskImage
     $img_path = $image.ImagePath
     ""
-    if ($image.ImagePath -ne $iso.ImagePath)
+    if ($image.ImagePath -ne $drive.ImagePath)
     {
       "Skipping image with different paths: '${img_path}'"
       continue
@@ -69,7 +69,6 @@ if ($cleanup)
 }
 
 "- Finale image state:"
-$iso = Get-DiskImage -ImagePath $iso.ImagePath
-$iso | fl
+Get-DiskImage -ImagePath $drive.ImagePath | fl
 
 "."
