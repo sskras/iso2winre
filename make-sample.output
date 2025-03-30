@@ -1,8 +1,20 @@
 - Initial optical drives
 
-DeviceID Size VolumeName Description
--------- ---- ---------- -----------
-D:                       CD-ROM Disc
+DeviceID Size       VolumeName             Description
+-------- ----       ----------             -----------
+D:                                         CD-ROM Disc
+E:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+I:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+J:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+K:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+L:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+M:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+N:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+O:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+Q:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 - Details of the image
 
 
@@ -10,11 +22,11 @@ D:                       CD-ROM Disc
 
 Attached          : True
 BlockSize         : 0
-DevicePath        : \\.\CDROM10
+DevicePath        : \\.\CDROM1
 FileSize          : 4439830528
 ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
-Number            : 
+Number            : 1
 Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
@@ -43,17 +55,29 @@ DeviceID Size       VolumeName             Description
 -------- ----       ----------             -----------
 D:                                         CD-ROM Disc
 E:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+I:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+J:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+K:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+L:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+M:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+N:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+O:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+P:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+Q:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 - Drive letters diff
 
 InputObject SideIndicator
 ----------- -------------
-          E =>           
+          P =>           
 
 
 .
 
-real	0m4.330s
+real	0m3.239s
 user	0m0.000s
-sys	0m0.062s
+sys	0m0.015s
