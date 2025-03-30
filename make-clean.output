@@ -4,21 +4,20 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 - Cleaning up virtual drives mounted from the image:
 
  * initial volume:
- * next device path: \\.\CDROM12
- * next device dismount: 
-Dismount-DiskImage : The system cannot find the file specified. 
-At C:\msys64\home\Renato\debug\mount-ISO,-mount-ESD-or-WIM,-inpect-WinRE.wim\iso-image.ps1:46 char:14
-+     $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
-+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (MSFT_DiskImage:ROOT/Microsoft/.../MSFT_DiskImage) [Dismount-DiskImage], CimException
-    + FullyQualifiedErrorId : HRESULT 0x80070002,Dismount-DiskImage
- 
 - Finale image state:
-Get-DiskImage : Cannot bind argument to parameter 'ImagePath' because it is null.
-At C:\msys64\home\Renato\debug\mount-ISO,-mount-ESD-or-WIM,-inpect-WinRE.wim\iso-image.ps1:53 char:26
-+ Get-DiskImage -ImagePath $drive.ImagePath | fl
-+                          ~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidData: (:) [Get-DiskImage], ParameterBindingValidationException
-    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Get-DiskImage
- 
+
+
+Attached          : False
+BlockSize         : 0
+DevicePath        : 
+FileSize          : 4439830528
+ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    : 
+
+
+
 .
