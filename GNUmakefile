@@ -48,7 +48,7 @@ sample:
 	    ./iso2winre.ps1 ${sample_iso}                   \
 	    " 2>&1                                          \
 	    | sed 's/\r//'                                  \
-	    | tee iso2winre-sample.output                   \
+	    | tee make-sample.output                        \
 
 clean:
 	./iso-image.ps1 ${sample_iso} -cleanup              \
