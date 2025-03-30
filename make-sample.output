@@ -42,18 +42,18 @@ PSComputerName    :
 DeviceID Size       VolumeName             Description
 -------- ----       ----------             -----------
 D:                                         CD-ROM Disc
-E:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 - Drive letters diff
 
 InputObject SideIndicator
 ----------- -------------
-          E =>           
+          F =>           
 
 
 .
 
-real	0m5.215s
-user	0m0.015s
-sys	0m0.077s
+real	0m5.189s
+user	0m0.000s
+sys	0m0.030s
