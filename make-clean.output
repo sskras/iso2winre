@@ -5,15 +5,42 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
  * initial volume:
 
+DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
+----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
+E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+
+
+ * normalized path of the mounted ISO:
+
+C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+
  * found label:
 
+CENA_X64FREE_EN-US_DV9
 
  * all volumes by the label:
-Get-Volume : Cannot validate argument on parameter 'FileSystemLabel'. The argument is null. Provide a valid value for the argument, and then try running the command again.
-At C:\msys64\home\Renato\debug\mount-ISO,-mount-ESD-or-WIM,-inpect-WinRE.wim\iso-image.ps1:48 char:44
-+   $all_vols  = Get-Volume -FileSystemLabel $iso_label
-+                                            ~~~~~~~~~~
-    + CategoryInfo          : InvalidData: (:) [Get-Volume], ParameterBindingValidationException
-    + FullyQualifiedErrorId : ParameterArgumentValidationError,Get-Volume
- 
+
+DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
+----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
+E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+
+
+C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+
+ * dismounting volume \\?\Volume{ea723482-f3a2-11ef-b267-00c2c63e9b7a}\
+
+
+Attached          : True
+BlockSize         : 0
+DevicePath        : \\.\CDROM10
+FileSize          : 4439830528
+ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    : 
+
+
+
 .

@@ -23,7 +23,7 @@ $iso_file = $args
 Write-Output $iso_file
 ""
 
-$iso = Get-DiskImage -ImagePath $iso_file | Get-Volume | Get-DiskImage
+$iso = Get-DiskImage -ImagePath $iso_file
 
 if ($info)
 {
@@ -38,6 +38,11 @@ if ($cleanup)
   " * initial volume:"
   $init_vol  = $iso | Get-Volume
   $init_vol | ft
+
+  " * normalized path of the mounted ISO:"
+  ""
+  $iso = $init_vol | Get-DiskImage
+  $iso.ImagePath
   ""
   " * found label:"
   ""
