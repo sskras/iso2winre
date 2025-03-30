@@ -57,7 +57,6 @@ if ($cleanup)
   {
     $image = $vol | Get-DiskImage
     $img_path = $image.ImagePath
-    $img_path
     ""
     if ($image.ImagePath -ne $iso.ImagePath)
     {
@@ -68,5 +67,8 @@ if ($cleanup)
     Dismount-DiskImage -ImagePath $image.ImagePath | fl
   }
 }
+
+$iso = Get-DiskImage -ImagePath $iso_file
+$iso
 
 "."

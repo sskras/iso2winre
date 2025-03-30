@@ -7,7 +7,7 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 
 
  * normalized path of the mounted ISO:
@@ -22,12 +22,11 @@ CENA_X64FREE_EN-US_DV9
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 
 
-C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 
- * dismounting volume \\?\Volume{ea723482-f3a2-11ef-b267-00c2c63e9b7a}\
+ * dismounting volume \\?\Volume{fdf3f954-f25e-11ef-b265-00c2c63e9b7a}\
 
 
 Attached          : True
@@ -43,4 +42,19 @@ PSComputerName    :
 
 
 
+
+
+Attached          : True
+BlockSize         : 0
+DevicePath        : \\.\CDROM10
+FileSize          : 4439830528
+ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    : 
+
 .
+
+
