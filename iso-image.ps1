@@ -42,6 +42,7 @@ if ($cleanup)
   " * next device path: " + $drive.DevicePath
   " * next device dismount: "
   $drive = Dismount-DiskImage -DevicePath $drive.DevicePath | fl
+  $drive
 
   continue
 

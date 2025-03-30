@@ -7,8 +7,22 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 
 
- * next device path: \\.\CDROM1
- * next device dismount: 
+ * next device path: \\.\CDROM2
+ * next device dismount:
+
+
+Attached          : True
+BlockSize         : 0
+DevicePath        : \\.\CDROM3
+FileSize          : 4439830528
+ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 3
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    :
+
+
