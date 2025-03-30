@@ -11,6 +11,7 @@ E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK     
 
 
  * dismounting device path: \\.\CDROM1
+   \\?\Volume{fdf3f954-f25e-11ef-b265-00c2c63e9b7a}\ (E:)
 
 
 Attached          : True
@@ -27,6 +28,7 @@ PSComputerName    :
 
 
  * dismounting device path: \\.\CDROM2
+   \\?\Volume{ea7226f1-f3a2-11ef-b267-00c2c63e9b7a}\
 
 
 Attached          : True
@@ -43,6 +45,7 @@ PSComputerName    :
 
 
  * dismounting device path: \\.\CDROM3
+   \\?\Volume{ea723482-f3a2-11ef-b267-00c2c63e9b7a}\ (G:)
 
 
 Attached          : False

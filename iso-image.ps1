@@ -42,9 +42,16 @@ if ($cleanup)
   while ($drive.DevicePath)
   {
     " * dismounting device path: " + $drive.DevicePath
+    $vol = $drive | Get-Volume
+    $letter = $vol.DriveLetter
+    $vol_path = $vol.Path
+    if ($letter)
+    {
+      $letter = " (${letter}:)"
+    }
+    "   ${vol_path}" + ${letter}
     $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
     $drive | fl
-
   }
 }
 
