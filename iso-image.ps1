@@ -34,10 +34,17 @@ if ($info)
 if ($cleanup)
 {
   "- Cleaning up virtual drives mounted from the image:"
+  ""
+  " * initial volume:"
   $init_vol  = $iso | Get-Volume
   $init_vol | ft
+  ""
+  " * found label:"
+  ""
   $iso_label = $init_vol.FileSystemLabel
   $iso_label
+  ""
+  " * all volumes by the label:"
   $all_vols  = Get-Volume -FileSystemLabel $iso_label
   $all_vols | ft
 
@@ -46,12 +53,14 @@ if ($cleanup)
     $image = $vol | Get-DiskImage
     $img_path = $image.ImagePath
     $img_path
-
+    ""
     if ($image.ImagePath -ne $iso.ImagePath)
     {
-      "Skipping image with different paths: ${img_path}"
+      "Skipping image with different paths: '${img_path}'"
       continue
     }
+    " * dismounting volume " + $vol.Path
+    Dismount-DiskImage -ImagePath $image.ImagePath | fl
   }
 }
 
