@@ -39,11 +39,14 @@ if ($cleanup)
   $init_vol  = $drive | Get-Volume
   $init_vol | ft
 
+  while ($drive.DevicePath)
+  {
   " * next device path: " + $drive.DevicePath
-  " * next device dismount: "
-  $drive = Dismount-DiskImage -DevicePath $drive.DevicePath | fl
-  $drive
+    " * next device dismount: "
+  $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
+    $drive | fl
 
+  }
   continue
 
   " * normalized path of the mounted ISO:"
