@@ -7,7 +7,7 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+G           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 
 
  * normalized path of the mounted ISO:
@@ -22,155 +22,9 @@ CENA_X64FREE_EN-US_DV9
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-I           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-J           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-K           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-L           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-M           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-N           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-O           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 G           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 Q           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 P           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-H           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-
-
-
- * dismounting volume \\?\Volume{59b315c4-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM2
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 2
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b315c9-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM3
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 3
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b315ca-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM4
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 4
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b315cb-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM5
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 5
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b315cc-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM6
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 6
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b31669-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM7
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 7
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b3166a-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM8
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 8
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-
- * dismounting volume \\?\Volume{59b3167b-0360-11f0-b269-00c2c63e9b7a}\
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM9
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 9
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
 
 
 
@@ -179,11 +33,11 @@ PSComputerName    :
 
 Attached          : True
 BlockSize         : 0
-DevicePath        : \\.\CDROM10
+DevicePath        : \\.\CDROM12
 FileSize          : 4439830528
 ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
-Number            : 10
+Number            : 12
 Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
@@ -196,11 +50,11 @@ PSComputerName    :
 
 Attached          : True
 BlockSize         : 0
-DevicePath        : \\.\CDROM10
+DevicePath        : \\.\CDROM13
 FileSize          : 4439830528
 ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
-Number            : 10
+Number            : 13
 Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
@@ -211,47 +65,29 @@ PSComputerName    :
  * dismounting volume \\?\Volume{59b31694-0360-11f0-b269-00c2c63e9b7a}\
 
 
-Attached          : True
+Attached          : False
 BlockSize         : 0
-DevicePath        : \\.\CDROM11
+DevicePath        : 
 FileSize          : 4439830528
 ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
-Number            : 11
+Number            : 
 Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
 
 
 
-Get-DiskImage : The requested object could not be found.
-At C:\msys64\home\Renato\debug\mount-ISO,-mount-ESD-or-WIM,-inpect-WinRE.wim\iso-image.ps1:58 char:21
-+     $image = $vol | Get-DiskImage
-+                     ~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (MSFT_DiskImage:ROOT/Microsoft/.../MSFT_DiskImage) [Get-DiskImage], CimException
-    + FullyQualifiedErrorId : MI RESULT 6,Get-DiskImage
- 
-
-Skipping image with different paths: ''
-Get-DiskImage : The requested object could not be found.
-At C:\msys64\home\Renato\debug\mount-ISO,-mount-ESD-or-WIM,-inpect-WinRE.wim\iso-image.ps1:58 char:21
-+     $image = $vol | Get-DiskImage
-+                     ~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (MSFT_DiskImage:ROOT/Microsoft/.../MSFT_DiskImage) [Get-DiskImage], CimException
-    + FullyQualifiedErrorId : MI RESULT 6,Get-DiskImage
- 
-
-Skipping image with different paths: ''
 - Finale image state:
 
 
-Attached          : True
+Attached          : False
 BlockSize         : 0
-DevicePath        : \\.\CDROM11
+DevicePath        : 
 FileSize          : 4439830528
 ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
-Number            : 11
+Number            : 
 Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
