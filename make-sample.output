@@ -1,20 +1,27 @@
 - Initial optical drives
 
-DeviceID Size VolumeName Description
--------- ---- ---------- -----------
-D:                       CD-ROM Disc
+DeviceID Size       VolumeName             Description
+-------- ----       ----------             -----------
+D:                                         CD-ROM Disc
+E:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+I:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+K:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+L:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 - Details of the image
 
 
 
 
-Attached          : False
+Attached          : True
 BlockSize         : 0
-DevicePath        : 
+DevicePath        : \\.\CDROM1
 FileSize          : 4439830528
 ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
-Number            : 
+Number            : 1
 Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
@@ -42,18 +49,25 @@ PSComputerName    :
 DeviceID Size       VolumeName             Description
 -------- ----       ----------             -----------
 D:                                         CD-ROM Disc
+E:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 F:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+G:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+H:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+I:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+K:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+L:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
+M:       4439830528 CENA_X64FREE_EN-US_DV9 CD-ROM Disc
 
 
 - Drive letters diff
 
 InputObject SideIndicator
 ----------- -------------
-          F =>           
+          M =>           
 
 
 .
 
-real	0m3.165s
+real	0m3.149s
 user	0m0.000s
-sys	0m0.030s
+sys	0m0.062s
