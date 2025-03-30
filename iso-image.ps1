@@ -68,6 +68,7 @@ if ($cleanup)
   }
 }
 
+"- Finale image state:"
 $iso = Get-DiskImage -ImagePath $iso_file
 $iso
 

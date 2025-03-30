@@ -7,7 +7,7 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+G           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 
 
  * normalized path of the mounted ISO:
@@ -22,11 +22,11 @@ CENA_X64FREE_EN-US_DV9
 
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
-F           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+G           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 
 
 
- * dismounting volume \\?\Volume{fdf3f954-f25e-11ef-b265-00c2c63e9b7a}\
+ * dismounting volume \\?\Volume{ea7226f1-f3a2-11ef-b267-00c2c63e9b7a}\
 
 
 Attached          : True
@@ -42,6 +42,7 @@ PSComputerName    :
 
 
 
+- Finale image state:
 
 
 Attached          : True
