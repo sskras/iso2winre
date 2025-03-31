@@ -5,9 +5,9 @@
 
 # ISO image helper tool for:
 #
-# - checking image details,
+# + checking image details,
 # - mounting an image,
-# - cleaning up virtual drives mounted from an ISO image.
+# + cleaning up virtual drives mounted from an ISO image.
 
 param
 (
@@ -55,6 +55,12 @@ if ($cleanup)
       $letter = " (${letter}:)"
     }
     "   ${vol_path}" + ${letter}
+
+    # TODO: Loop the following dismount using the same $drive.DevicePath until it starts failing.
+    # (Maybe via PowerShell exceptions/errors handling)
+    #
+    # This sometimes is needed because sometimes (esp. after multipe runs of RemoveDrive_x64)
+    # OS gets multiple volumes mounted under the same \\.\CDROMx drive.
 
     $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
     $drive | fl
