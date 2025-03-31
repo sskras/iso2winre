@@ -20,19 +20,22 @@ param
 $iso_file = $args
 
 "- Processing the image:"
+""
 Write-Output $iso_file
 ""
 
-$drive = Get-DiskImage -ImagePath $iso_file
-
 if ($info)
 {
+  $drive = Get-DiskImage -ImagePath $iso_file
+
   "- Image details:"
   $drive | fl
 }
 
 if ($cleanup)
 {
+  $drive = Get-DiskImage -ImagePath $iso_file
+
   "- Cleaning up virtual drives mounted from the image:"
   ""
   " * initial volume:"
@@ -42,20 +45,20 @@ if ($cleanup)
   while ($drive.DevicePath)
   {
     " * dismounting device path: " + $drive.DevicePath
+    ""
     $vol = $drive | Get-Volume
     $letter = $vol.DriveLetter
     $vol_path = $vol.Path
+
     if ($letter)
     {
       $letter = " (${letter}:)"
     }
     "   ${vol_path}" + ${letter}
+
     $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
     $drive | fl
   }
 }
-
-"- Finale image state:"
-Get-DiskImage -ImagePath $drive.ImagePath | fl
 
 "."

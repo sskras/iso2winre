@@ -1,4 +1,5 @@
 - Processing the image:
+
 C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 
 - Cleaning up virtual drives mounted from the image:
@@ -11,6 +12,7 @@ E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK     
 
 
  * dismounting device path: \\.\CDROM1
+
    \\?\Volume{fdf3f954-f25e-11ef-b265-00c2c63e9b7a}\ (E:)
 
 
@@ -28,6 +30,7 @@ PSComputerName    :
 
 
  * dismounting device path: \\.\CDROM2
+
    \\?\Volume{ea7226f1-f3a2-11ef-b267-00c2c63e9b7a}\ (F:)
 
 
@@ -45,23 +48,8 @@ PSComputerName    :
 
 
  * dismounting device path: \\.\CDROM3
+
    \\?\Volume{ea723482-f3a2-11ef-b267-00c2c63e9b7a}\ (G:)
-
-
-Attached          : False
-BlockSize         : 0
-DevicePath        : 
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
-- Finale image state:
 
 
 Attached          : False
