@@ -56,6 +56,6 @@ InputObject SideIndicator
 
 .
 
-real	0m4.630s
-user	0m0.000s
-sys	0m0.077s
+real	0m4.550s
+user	0m0.031s
+sys	0m0.030s
