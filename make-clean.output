@@ -28,7 +28,7 @@ PSComputerName    :
 
 
  * dismounting device path: \\.\CDROM2
-   \\?\Volume{ea7226f1-f3a2-11ef-b267-00c2c63e9b7a}\
+   \\?\Volume{ea7226f1-f3a2-11ef-b267-00c2c63e9b7a}\ (F:)
 
 
 Attached          : True
