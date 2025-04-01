@@ -4,11 +4,27 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
 - Cleaning up virtual drives mounted from the image:
 
- * initial volume:
-
 DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
 ----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
+I           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+H           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
 E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+
+
+ * found device:
+
+
+Attached          : True
+BlockSize         : 0
+DevicePath        : \\.\CDROM1
+FileSize          : 4439830528
+ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 1
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    : 
+
 
 
  * dismounting device path: \\.\CDROM1
@@ -31,7 +47,7 @@ PSComputerName    :
 
  * dismounting device path: \\.\CDROM2
 
-   \\?\Volume{ea7226f1-f3a2-11ef-b267-00c2c63e9b7a}\ (F:)
+   \\?\Volume{ea723704-f3a2-11ef-b267-00c2c63e9b7a}\ (H:)
 
 
 Attached          : True
@@ -49,7 +65,7 @@ PSComputerName    :
 
  * dismounting device path: \\.\CDROM3
 
-   \\?\Volume{ea723704-f3a2-11ef-b267-00c2c63e9b7a}\ (H:)
+   \\?\Volume{59b315c4-0360-11f0-b269-00c2c63e9b7a}\ (I:)
 
 
 Attached          : False
@@ -63,6 +79,24 @@ Size              : 4439830528
 StorageType       : 1
 PSComputerName    : 
 
+
+
+
+DriveLetter FriendlyName             FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- ------------             -------------- --------- ------------ ----------------- -------------      ----
+            Riservato per il sistema NTFS           Fixed     Healthy      OK                    544.79 MB    579 MB
+C                                    NTFS           Fixed     Healthy      OK                     80.56 GB 222.44 GB
+                                     NTFS           Fixed     Healthy      OK                    561.93 MB    576 MB
+D                                    Unknown        CD-ROM    Healthy      Unknown                     0 B       0 B
+
+
+
+Label                    FileSystem DriveLetter DeviceID                                         
+-----                    ---------- ----------- --------                                         
+Riservato per il sistema NTFS                   \\?\Volume{7888f29f-0000-0000-0000-100000000000}\
+                         NTFS       C:          \\?\Volume{7888f29f-0000-0000-0000-402400000000}\
+                         NTFS                   \\?\Volume{7888f29f-0000-0000-0000-50c037000000}\
+                                    D:          \\?\Volume{e3d685f2-4db5-11ea-b180-806e6f6e6963}\
 
 
 .

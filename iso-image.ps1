@@ -43,12 +43,18 @@ if ($cleanup)
   $init_vol  = $drive | Get-Volume
   if ($init_vol)
   {
-    ""
-    " * initial volume:"
-    $init_vol | ft
+    $all_vols = Get-Volume -FileSystemLabel $init_vol.FileSystemLabel
+    $all_vols | ft
   }
+  else { "" }
 
+  " * found device:"
   $drive | fl
+
+  if (!$drive.Attached)
+  {
+    Write-Output "  Nothing left to dismount."
+  }
 
   while ($drive.DevicePath)
   {
@@ -78,7 +84,7 @@ if ($cleanup)
 if ($mount)
 {
   "- Initial optical drives"
-  Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description
+  Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft
 
   "- Details of the image"
   Get-DiskImage -ImagePath ${iso_file} | fl
@@ -94,6 +100,7 @@ if ($mount)
   $letters_after = (Get-Volume).DriveLetter
 
   "- Drive letters diff"
+  Compare-Object ($letters_before | Select-Object) ($letters_after | Select-Object) | ft
 }
 
 if ($list)
