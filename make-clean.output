@@ -4,75 +4,14 @@ C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTEN
 
 - Cleaning up virtual drives mounted from the image:
 
-DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
------------ ------------           -------------- --------- ------------ ----------------- -------------    ----
-I           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-H           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
-
-
  * found device:
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM1
-FileSize          : 4439830528
-ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 1
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
- * dismounting device path: \\.\CDROM1
-
-   \\?\Volume{fdf3f954-f25e-11ef-b265-00c2c63e9b7a}\ (E:)
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM2
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 2
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
- * dismounting device path: \\.\CDROM2
-
-   \\?\Volume{ea723704-f3a2-11ef-b267-00c2c63e9b7a}\ (H:)
-
-
-Attached          : True
-BlockSize         : 0
-DevicePath        : \\.\CDROM3
-FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
-LogicalSectorSize : 2048
-Number            : 3
-Size              : 4439830528
-StorageType       : 1
-PSComputerName    : 
-
-
-
- * dismounting device path: \\.\CDROM3
-
-   \\?\Volume{59b315c4-0360-11f0-b269-00c2c63e9b7a}\ (I:)
 
 
 Attached          : False
 BlockSize         : 0
 DevicePath        : 
 FileSize          : 4439830528
-ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
 Number            : 
 Size              : 4439830528
@@ -81,6 +20,9 @@ PSComputerName    :
 
 
 
+ * Nothing left to dismount.
+
+- Current volumes:
 
 DriveLetter FriendlyName             FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
 ----------- ------------             -------------- --------- ------------ ----------------- -------------      ----

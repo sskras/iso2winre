@@ -51,11 +51,6 @@ if ($cleanup)
   " * found device:"
   $drive | fl
 
-  if (!$drive.Attached)
-  {
-    Write-Output "  Nothing left to dismount."
-  }
-
   while ($drive.DevicePath)
   {
     " * dismounting device path: " + $drive.DevicePath
@@ -78,6 +73,12 @@ if ($cleanup)
 
     $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
     $drive | fl
+  }
+
+  if (!$drive.Attached)
+  {
+    Write-Output " * Nothing left to dismount."
+    ""
   }
 }
 
@@ -105,6 +106,7 @@ if ($mount)
 
 if ($list)
 {
+  "- Current volumes:"
   Get-Volume | ft
   Get-WmiObject -Class Win32_Volume | Select-Object Label, FileSystem, DriveLetter, DeviceID | ft
 }
