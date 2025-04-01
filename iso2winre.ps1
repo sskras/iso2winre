@@ -10,6 +10,7 @@
 $iso_full=$args
 
 "- Mount the ISO image"
-Mount-DiskImage -ImagePath ${iso_full} -PassThru
+$drive = Mount-DiskImage -ImagePath ${iso_full} -PassThru
+$drive | fl
 
 "."
