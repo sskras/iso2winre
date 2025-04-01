@@ -17,4 +17,10 @@ $drive | fl
 $vol = $drive | Get-Volume
 $vol | ft
 
+"- Get drive root:"
+""
+$path = $vol.DriveLetter + ":\"
+$path
+""
+
 "."
