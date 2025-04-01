@@ -13,4 +13,8 @@ $iso_full=$args
 $drive = Mount-DiskImage -ImagePath ${iso_full} -PassThru
 $drive | fl
 
+"- Get the volume"
+$vol = $drive | Get-Volume
+$vol | ft
+
 "."
