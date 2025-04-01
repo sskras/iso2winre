@@ -23,9 +23,13 @@ $path = $vol.DriveLetter + ":\"
 $path
 ""
 
-"- Get the WIM/ESD installation image"
+"- Get the install WIM/ESD image"
 $installation = Get-ChildItem -Path $path -Recurse -Include install.*
 $installation | Select-Object FullName, Length, LastWriteTimeUtc
 ""
+
+"- Get the install WIM/ESD info:"
+$wim_esd = Get-WindowsImage -ImagePath $installation.FullName
+$wim_esd | fl
 
 "."
