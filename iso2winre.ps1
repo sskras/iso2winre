@@ -32,4 +32,10 @@ $installation | Select-Object FullName, Length, LastWriteTimeUtc
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
 $wim_esd | fl
 
+"- Create mount dir:"
+""
+$mount = "C:\mnt\" + $vol.FileSystemLabel
+New-Item -ItemType Directory $mount
+""
+
 "."
