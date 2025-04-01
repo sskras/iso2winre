@@ -38,4 +38,8 @@ $mount = "C:\mnt\" + $vol.FileSystemLabel
 New-Item -ItemType Directory $mount
 ""
 
+"- Mount WIM/ESD:"
+$wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount
+$wim_esd | fl
+
 "."
