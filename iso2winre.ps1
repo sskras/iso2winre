@@ -35,11 +35,12 @@ $wim_esd | fl
 "- Create mount dir:"
 ""
 $mount = ".\mnt\" + $vol.FileSystemLabel
+$log = $mount + ".log"
 New-Item -ItemType Directory $mount
 ""
 
 "- Mount WIM/ESD:"
-$wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount
+$wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log
 $wim_esd | Select-Object * | fl
 
 "."
