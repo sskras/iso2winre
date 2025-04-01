@@ -56,3 +56,6 @@ clean:
 	    | sed 's/\r//'                                  \
 	    | tee make-clean.output                         \
 
+run:
+	./iso2winre.ps1 ${sample_iso}                       \
+
