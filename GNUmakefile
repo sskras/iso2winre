@@ -51,7 +51,7 @@ sample:
 	    | tee make-sample.output                        \
 
 clean:
-	./iso-image.ps1 ${sample_iso} -cleanup              \
+	./iso-image.ps1 ${sample_iso} -cleanup -list        \
 	    2>&1                                            \
 	    | sed 's/\r//'                                  \
 	    | tee make-clean.output                         \

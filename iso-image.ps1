@@ -14,6 +14,7 @@ param
   [switch] $info,
   [switch] $cleanup,
   [switch] $mount,
+  [switch] $list,
   [switch] $EOA         # End of Arguments (a virtual argument, not intended to be actually used)
 )
 # Via: https://www.red-gate.com/simple-talk/sysadmin/powershell/how-to-use-parameters-in-powershell-part-ii/#boolean-vs-switch
@@ -93,6 +94,12 @@ if ($mount)
   $letters_after = (Get-Volume).DriveLetter
 
   "- Drive letters diff"
+}
+
+if ($list)
+{
+  Get-Volume | ft
+  Get-WmiObject -Class Win32_Volume | Select-Object Label, FileSystem, DriveLetter, DeviceID | ft
 }
 
 "."
