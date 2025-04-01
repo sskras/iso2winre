@@ -39,9 +39,13 @@ if ($cleanup)
 
   "- Cleaning up virtual drives mounted from the image:"
   ""
-  " * initial volume:"
+
   $init_vol  = $drive | Get-Volume
+  if ($init_vol)
+  {
+    " * initial volume:"
   $init_vol | ft
+  }
 
   while ($drive.DevicePath)
   {
