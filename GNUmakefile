@@ -59,3 +59,8 @@ clean:
 run:
 	./iso2winre.ps1 ${sample_iso}                       \
 
+list:
+	./iso-image.ps1 -list                               \
+	    2>&1                                            \
+	    | sed 's/\r//'                                  \
+
