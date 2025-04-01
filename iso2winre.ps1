@@ -24,8 +24,8 @@ $path
 ""
 
 "- Get the WIM/ESD installation image"
-$wim_esd = Get-ChildItem -Path $path -Recurse -Include install.*
-$wim_esd | Select-Object FullName, Length, LastWriteTimeUtc
+$installation = Get-ChildItem -Path $path -Recurse -Include install.*
+$installation | Select-Object FullName, Length, LastWriteTimeUtc
 ""
 
 "."
