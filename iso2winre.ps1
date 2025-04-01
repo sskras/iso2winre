@@ -9,23 +9,7 @@
 
 $iso_full=$args
 
-"- Initial optical drives"
-Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description
-
-"- Details of the image"
-Get-DiskImage -ImagePath ${iso_full} | fl
-
-$letters_before = (Get-Volume).DriveLetter
-
 "- Mount the ISO image"
 Mount-DiskImage -ImagePath ${iso_full} -PassThru
-
-"- Final optical drives"
-Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft
-
-$letters_after = (Get-Volume).DriveLetter
-
-"- Drive letters diff"
-Compare-Object ($letters_before | Select-Object) ($letters_after | Select-Object) | ft
 
 "."

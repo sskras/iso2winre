@@ -45,7 +45,7 @@ desc:
 
 sample:
 	@sh -c "time                                        \
-	    ./iso2winre.ps1 ${sample_iso}                   \
+	    ./iso-image.ps1 ${sample_iso} -mount            \
 	    " 2>&1                                          \
 	    | sed 's/\r//'                                  \
 	    | tee make-sample.output                        \

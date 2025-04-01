@@ -13,6 +13,7 @@ param
 (
   [switch] $info,
   [switch] $cleanup,
+  [switch] $mount,
   [switch] $EOA         # End of Arguments (a virtual argument, not intended to be actually used)
 )
 # Via: https://www.red-gate.com/simple-talk/sysadmin/powershell/how-to-use-parameters-in-powershell-part-ii/#boolean-vs-switch
@@ -65,6 +66,27 @@ if ($cleanup)
     $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
     $drive | fl
   }
+}
+
+if ($mount)
+{
+  "- Initial optical drives"
+  Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description
+
+  "- Details of the image"
+  Get-DiskImage -ImagePath ${iso_file} | fl
+
+  $letters_before = (Get-Volume).DriveLetter
+
+  "- Mount the ISO image"
+  Mount-DiskImage -ImagePath ${iso_file} -PassThru
+
+  "- Final optical drives"
+  Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft
+
+  $letters_after = (Get-Volume).DriveLetter
+
+  "- Drive letters diff"
 }
 
 "."
