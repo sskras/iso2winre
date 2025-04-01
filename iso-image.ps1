@@ -38,14 +38,16 @@ if ($cleanup)
   $drive = Get-DiskImage -ImagePath $iso_file
 
   "- Cleaning up virtual drives mounted from the image:"
-  ""
 
   $init_vol  = $drive | Get-Volume
   if ($init_vol)
   {
+    ""
     " * initial volume:"
-  $init_vol | ft
+    $init_vol | ft
   }
+
+  $drive | fl
 
   while ($drive.DevicePath)
   {
