@@ -39,7 +39,7 @@ $log = $mount + ".log"
 New-Item -ItemType Directory $mount
 ""
 
-# Finish screen before the lengthy operation:
+# Sync screen before the lengthy operation:
 [Console]::Out.Flush()
 
 "- Mount WIM/ESD:"
@@ -57,6 +57,10 @@ $winre | Select-Object FullName, Length, LastWriteTime | ft
 $out = $mount + ".WinRE\"
 New-Item -ItemType Directory $out
 ""
+
+"- Copy WinRE files here:"
+$winre | Copy-Item -Destination $out
+Get-ChildItem -Path $out -Recurse
 
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
