@@ -61,6 +61,10 @@ New-Item -ItemType Directory $out
 "- Copy WinRE files here:"
 $winre | Copy-Item -Destination $out
 Get-ChildItem -Path $out -Recurse
+""
+
+# Sync screen before the lengthy operation:
+[Console]::Out.Flush()
 
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
