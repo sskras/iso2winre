@@ -25,7 +25,7 @@ $path
 
 "- Get the install WIM/ESD image"
 $installation = Get-ChildItem -Path $path -Recurse -Include install.*
-$installation | Select-Object FullName, Length, LastWriteTimeUtc
+$installation | Select-Object FullName, Length, LastWriteTime | ft
 ""
 
 "- Get the install WIM/ESD info:"
@@ -38,6 +38,9 @@ $mount = ".\mnt\" + $vol.FileSystemLabel
 $log = $mount + ".log"
 New-Item -ItemType Directory $mount
 ""
+
+# Finish screen before the lengthy operation:
+[Console]::Out.Flush()
 
 "- Mount WIM/ESD:"
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
