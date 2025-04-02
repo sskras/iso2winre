@@ -40,7 +40,7 @@ New-Item -ItemType Directory $mount
 ""
 
 "- Mount WIM/ESD:"
-$wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log
+$wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 $wim_esd | Select-Object * | fl
 
 "- Dismount WIM/ESD:"
