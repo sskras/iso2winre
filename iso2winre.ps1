@@ -46,6 +46,13 @@ New-Item -ItemType Directory $mount
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 $wim_esd | Select-Object * | fc
 
+"- Search for WinRE files:"
+""
+$path = $mount + '\Windows\System32\Recovery'
+$winre = Get-ChildItem -Path $path -Recurse
+$winre | Select-Object FullName, Length, LastWriteTime | ft
+""
+
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
 $wim_esd | Select-Object * | fc
