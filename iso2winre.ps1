@@ -47,4 +47,10 @@ $wim_esd | Select-Object * | fc
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
 $wim_esd | Select-Object * | fc
 
+"- Remove mount dir:"
+""
+Remove-Item -Recurse $mount -WhatIf
+Remove-Item -Recurse $mount
+""
+
 "."
