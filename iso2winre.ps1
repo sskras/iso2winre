@@ -7,7 +7,12 @@
 # - then mount the inner `INSTALL.{ESD,WIM}`
 # - and access the `WinRE.wim` image stored there.
 
-$iso_full=$args
+param
+(
+  [string] $iso_full,    # Assign the ISO path name by default.
+                         # no need to write `-iso_full ...`, plain `...` on the cmd-line works too.
+  [switch] $EOA          # End of Arguments.
+)
 
 "- Mount the ISO image"
 $drive = Mount-DiskImage -ImagePath ${iso_full} -PassThru
