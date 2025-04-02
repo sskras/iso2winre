@@ -11,8 +11,11 @@ param
 (
   [string] $iso_full,    # Assign the ISO path name by default.
                          # no need to write `-iso_full ...`, plain `...` on the cmd-line works too.
+  [string] $to,          # The output dir to store subdir with WinRE files (by default it's current dir).
   [switch] $EOA          # End of Arguments.
 )
+
+if (!$to) { $to = "." }
 
 "- Mount the ISO image"
 $drive = Mount-DiskImage -ImagePath ${iso_full} -PassThru
@@ -39,7 +42,7 @@ $wim_esd | fc
 
 "- Create mount dir:"
 ""
-$mount = ".\mnt\" + $vol.FileSystemLabel
+$mount = $to + "\" + $vol.FileSystemLabel
 $log = $mount + ".log"
 New-Item -ItemType Directory $mount
 ""
