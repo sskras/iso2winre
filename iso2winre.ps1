@@ -53,6 +53,11 @@ $winre = Get-ChildItem -Path $path -Recurse
 $winre | Select-Object FullName, Length, LastWriteTime | ft
 ""
 
+"- Create the empty output dir:"
+$out = $mount + ".WinRE\"
+New-Item -ItemType Directory $out
+""
+
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
 $wim_esd | Select-Object * | fc
