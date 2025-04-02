@@ -30,7 +30,7 @@ $installation | Select-Object FullName, Length, LastWriteTimeUtc
 
 "- Get the install WIM/ESD info:"
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
-$wim_esd | fl
+$wim_esd | fc
 
 "- Create mount dir:"
 ""
@@ -41,7 +41,7 @@ New-Item -ItemType Directory $mount
 
 "- Mount WIM/ESD:"
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
-$wim_esd | Select-Object * | fl
+$wim_esd | Select-Object * | fc
 
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
