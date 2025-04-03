@@ -74,7 +74,7 @@ Get-WindowsImage -Mounted | fl
 ""
 $path = $mount + '\Windows\System32\Recovery'
 "  $path"
-$winre = Get-ChildItem -Path $path -Recurse
+$winre = Get-ChildItem -LiteralPath $path -Recurse
 $winre | Select-Object FullName, Length, LastWriteTime | ft
 ""
 
@@ -86,7 +86,7 @@ if ($winre)
 
   "- Copy WinRE files here:"
   $winre | Copy-Item -Destination $out
-  Get-ChildItem -Path $out -Recurse | fl
+  Get-ChildItem -LiteralPath $out -Recurse | fl
 }
 else
 {
@@ -103,8 +103,8 @@ $wim_esd | Select-Object * | fc
 
 "- Remove mount dir:"
 ""
-Remove-Item -Recurse $mount -WhatIf
-Remove-Item -Recurse $mount
+Remove-Item -Recurse -LiteralPath $mount -WhatIf
+Remove-Item -Recurse -LiteralPath $mount
 ""
 
 "."
