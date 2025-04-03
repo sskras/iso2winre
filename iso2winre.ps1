@@ -55,21 +55,16 @@ $prefix
 ""
 
 "- Create mount dir:"
-""
 $mount = $to + "\" + $prefix + "-[" + $vol.FileSystemLabel + "]"
 $log = $mount + ".log"
 New-Item -ItemType Directory $mount | fl
-""
-
-# Sync screen before the lengthy operation:
-[Console]::Out.Flush()
 
 "- Mount WIM/ESD:"
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 $wim_esd | Select-Object * | fc
 
 "- List WIM mounts:"
-Get-WindowsImage -Mounted
+Get-WindowsImage -Mounted | fl
 
 "- Search for WinRE files in:"
 ""
@@ -96,11 +91,7 @@ else
 ""
 
 "- Press <Enter> to continue and dismount the image ..."
-""
 Read-Host
-
-# Sync screen before the lengthy operation:
-[Console]::Out.Flush()
 
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
