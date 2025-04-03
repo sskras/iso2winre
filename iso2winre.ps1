@@ -68,6 +68,9 @@ New-Item -ItemType Directory $mount | fl
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 $wim_esd | Select-Object * | fc
 
+"- List WIM mounts:"
+Get-WindowsImage -Mounted
+
 "- Search for WinRE files in:"
 ""
 $path = $mount + '\Windows\System32\Recovery'
