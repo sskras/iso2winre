@@ -60,10 +60,10 @@ $mount
 ""
 
 "- Create mount dir:"
-$log = $mount + ".log"
 New-Item -ItemType Directory $mount | fl
 
 "- Mount WIM/ESD:"
+$log = $mount + ".log"
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 $wim_esd | Select-Object * | fc
 
