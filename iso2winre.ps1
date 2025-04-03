@@ -60,12 +60,12 @@ $mount
 ""
 
 "- Create mount dir:"
-New-Item -ItemType Directory $mount | fl
+New-Item -ItemType Directory $mount | ft
 
 "- Mount WIM/ESD:"
 $log = $mount + ".log"
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
-$wim_esd | Select-Object * | fc
+if ($?) { $wim_esd | Select-Object | fc }
 
 "- List WIM mounts:"
 Get-WindowsImage -Mounted | fl
@@ -75,24 +75,24 @@ Get-WindowsImage -Mounted | fl
 $path = $mount + '\Windows\System32\Recovery'
 "  $path"
 $winre = Get-ChildItem -LiteralPath $path -Recurse
-$winre | Select-Object FullName, Length, LastWriteTime | ft
+$winre | ft
 ""
 
 if ($winre)
 {
-  "- Create the empty output dir:"
+  "- Create the output dir (in any):"
   $out = $mount + ".WinRE\"
-  New-Item -ItemType Directory $out | fl
+  New-Item -ItemType Directory $out | ft
 
   "- Copy WinRE files here:"
   $winre | Copy-Item -Destination $out
-  Get-ChildItem -LiteralPath $out -Recurse | fl
+  Get-ChildItem -LiteralPath $out -Recurse | ft
 }
 else
 {
   "  * No files found."
+  ""
 }
-""
 
 "- Press <Enter> to continue and dismount the image ..."
 Read-Host
