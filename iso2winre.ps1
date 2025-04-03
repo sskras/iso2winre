@@ -60,7 +60,7 @@ $mount
 ""
 
 "- Create mount dir:"
-New-Item -ItemType Directory $mount | ft
+New-Item -ItemType Directory -Force $mount | ft
 
 "- Mount WIM/ESD:"
 $log = $mount + ".log"
@@ -82,7 +82,7 @@ if ($winre)
 {
   "- Create the output dir (in any):"
   $out = $mount + ".WinRE\"
-  New-Item -ItemType Directory $out | ft
+  New-Item -ItemType Directory -Force $out | ft
 
   "- Copy WinRE files here:"
   $winre | Copy-Item -Destination $out
