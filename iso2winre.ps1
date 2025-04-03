@@ -92,6 +92,10 @@ else
 }
 ""
 
+"- Press <Enter> to continue and dismount the image ..."
+""
+Read-Host
+
 # Sync screen before the lengthy operation:
 [Console]::Out.Flush()
 
