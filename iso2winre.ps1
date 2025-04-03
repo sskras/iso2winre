@@ -58,7 +58,7 @@ $prefix
 ""
 $mount = $to + "\" + $prefix + "-[" + $vol.FileSystemLabel + "]"
 $log = $mount + ".log"
-New-Item -ItemType Directory $mount
+New-Item -ItemType Directory $mount | fl
 ""
 
 # Sync screen before the lengthy operation:
@@ -78,13 +78,13 @@ $winre | Select-Object FullName, Length, LastWriteTime | ft
 
 if ($winre)
 {
-"- Create the empty output dir:"
+  "- Create the empty output dir:"
   $out = $mount + ".WinRE\"
-New-Item -ItemType Directory $out
+  New-Item -ItemType Directory $out | fl
 
-"- Copy WinRE files here:"
+  "- Copy WinRE files here:"
   $winre | Copy-Item -Destination $out
-Get-ChildItem -Path $out -Recurse
+  Get-ChildItem -Path $out -Recurse | fl
 }
 else
 {
