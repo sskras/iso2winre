@@ -45,6 +45,8 @@ $installation | Select-Object FullName, Length, LastWriteTime | ft
 "- Get the install WIM/ESD info:"
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
 $wim_esd | fc
+$wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index 1
+$wim_esd | fl
 
 "- Get image edition / version:"
 ""
