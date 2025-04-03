@@ -15,6 +15,12 @@ param
   [switch] $EOA          # End of Arguments.
 )
 
+if (!$iso_full)
+{
+  "No ISO file given."
+  exit 1
+}
+
 if (!$to) { $to = "." }
 
 "- Mount the ISO image"
