@@ -48,14 +48,18 @@ $wim_esd | fc
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index 1
 $wim_esd | fl
 
-"- Get image edition / version:"
+"- Compile mount name from image details:"
 ""
-$prefix = $wim_esd.Version + "-" + $wim_esd.EditionId
-$prefix
+$mount = "{0}\{1}-{2}-[{3}]-{4}" -f `
+    $to, `
+    $wim_esd.Version, `
+    $wim_esd.EditionId, `
+    $vol.FileSystemLabel, `
+    $wim_esd.Languages[0]
+$mount
 ""
 
 "- Create mount dir:"
-$mount = $to + "\" + $prefix + "-[" + $vol.FileSystemLabel + "]"
 $log = $mount + ".log"
 New-Item -ItemType Directory $mount | fl
 
