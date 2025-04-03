@@ -68,21 +68,28 @@ New-Item -ItemType Directory $mount
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 $wim_esd | Select-Object * | fc
 
-"- Search for WinRE files:"
+"- Search for WinRE files in:"
 ""
 $path = $mount + '\Windows\System32\Recovery'
+"  $path"
 $winre = Get-ChildItem -Path $path -Recurse
 $winre | Select-Object FullName, Length, LastWriteTime | ft
 ""
 
+if ($winre)
+{
 "- Create the empty output dir:"
-$out = $mount + ".WinRE\"
+  $out = $mount + ".WinRE\"
 New-Item -ItemType Directory $out
-""
 
 "- Copy WinRE files here:"
-$winre | Copy-Item -Destination $out
+  $winre | Copy-Item -Destination $out
 Get-ChildItem -Path $out -Recurse
+}
+else
+{
+  "  * No files found."
+}
 ""
 
 # Sync screen before the lengthy operation:
