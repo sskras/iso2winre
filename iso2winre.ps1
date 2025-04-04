@@ -111,7 +111,9 @@ Remove-Item -Recurse -LiteralPath $mount -WhatIf
 Remove-Item -Recurse -LiteralPath $mount
 ""
 
-# TODO Dismount ISO file too.
+"- Dismount ISO file:"
+$drive = Dismount-DiskImage -DevicePath $drive.DevicePath
+$drive
 
 # TODO Show WinRE.wim details.
 
