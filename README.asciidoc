@@ -44,6 +44,237 @@ So I just run following in CMD:
 powershell -file .\iso2winre.git\iso2winre.ps1 C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso -to .\extracted
 ```
 
+<details> <summary>The sample output from CMD: ...</summary>
+
+```cmd
+- Mount the ISO image
+
+
+Attached          : True
+BlockSize         : 0
+DevicePath        : \\.\CDROM1
+FileSize          : 4439830528
+ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 1
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    : 
+
+
+
+- Get the volume
+
+DriveLetter FriendlyName           FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining    Size
+----------- ------------           -------------- --------- ------------ ----------------- -------------    ----
+E           CENA_X64FREE_EN-US_DV9 Unknown        CD-ROM    Healthy      OK                          0 B 4.13 GB
+
+
+- Get drive root:
+
+E:\
+
+- Get the install WIM/ESD image
+
+FullName                   Length LastWriteTime      
+--------                   ------ -------------      
+E:\sources\install.wim 3789344894 4/2/2019 1:32:12 AM
+
+
+
+- Get the install WIM/ESD info:
+
+class BasicImageInfoObject
+{
+  ImagePath = E:\sources\install.wim
+  ImageName = Windows 10 Enterprise Evaluation
+  ImageIndex = 1
+  ImageDescription = Windows 10 Enterprise Evaluation
+  ImageSize = 14257271011
+}
+
+
+
+
+
+ImageIndex       : 1
+ImageName        : Windows 10 Enterprise Evaluation
+ImageDescription : Windows 10 Enterprise Evaluation
+ImageSize        : 14,257,271,011 bytes
+WIMBoot          : False
+Architecture     : x64
+Hal              : 
+Version          : 10.0.18362.30
+SPBuild          : 30
+SPLevel          : 0
+EditionId        : EnterpriseEval
+InstallationType : Client
+ProductType      : WinNT
+ProductSuite     : Terminal Server
+SystemRoot       : WINDOWS
+DirectoryCount   : 18795
+FileCount        : 87658
+CreatedTime      : 4/2/2019 1:11:46 AM
+ModifiedTime     : 4/2/2019 1:23:36 AM
+Languages        : en-US (Default)
+
+
+
+- Compile mount name from image details:
+
+.\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US
+
+- Create mount dir:
+
+
+    Directory: C:\msys64\home\Renato\debug\extracted
+
+
+Mode          LastWriteTime Length Name                                                       
+----          ------------- ------ ----                                                       
+d-----   4/4/2025   1:15 PM        10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US
+
+
+- Mount WIM/ESD:
+
+class ImageObject
+{
+  Path = .\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US
+  Online = False
+}
+
+
+
+- List WIM mounts:
+
+
+Path        : C:\msys64\home\Renato\debug\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US
+ImagePath   : E:\sources\install.wim
+ImageIndex  : 1
+MountMode   : ReadOnly
+MountStatus : Ok
+
+
+
+- Search for WinRE files in:
+
+  .\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US\Windows\System32\Recovery
+
+
+    Directory: C:\msys64\home\Renato\debug\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US\Windows\System32\Recovery
+
+
+Mode          LastWriteTime    Length Name       
+----          -------------    ------ ----       
+-a---l  3/19/2019   5:49 AM       837 ReAgent.xml
+-a---l   4/2/2019  12:58 AM 382885295 Winre.wim  
+
+
+
+- Create the output dir (in any):
+
+
+    Directory: C:\msys64\home\Renato\debug\extracted
+
+
+Mode          LastWriteTime Length Name                                                             
+----          ------------- ------ ----                                                             
+d-----   4/4/2025   1:21 PM        10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US.WinRE
+
+
+- Copy WinRE files here:
+
+
+    Directory: C:\msys64\home\Renato\debug\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US.WinRE
+
+
+Mode          LastWriteTime    Length Name       
+----          -------------    ------ ----       
+-a----  3/19/2019   5:49 AM       837 ReAgent.xml
+-a----   4/2/2019  12:58 AM 382885295 Winre.wim  
+
+
+- Dismount WIM/ESD:
+
+class BaseDismObject
+{
+  LogPath = .\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US.log
+  ScratchDirectory = 
+  LogLevel = WarningsInfo
+}
+
+
+
+- Remove mount dir:
+
+What if: Performing the operation "Remove Directory" on target "C:\msys64\home\Renato\debug\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US".
+
+- Dismount ISO file:
+
+
+Attached          : False
+BlockSize         : 0
+DevicePath        : 
+FileSize          : 4439830528
+ImagePath         : C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+LogicalSectorSize : 2048
+Number            : 
+Size              : 4439830528
+StorageType       : 1
+PSComputerName    : 
+
+- WinRE.wim details:
+
+
+
+
+
+    Directory: C:\msys64\home\Renato\debug\extracted\10.0.18362.30-EnterpriseEval-[CENA_X64FREE_EN-US_DV9]-en-US.WinRE
+
+
+Mode          LastWriteTime    Length Name     
+----          -------------    ------ ----     
+-a----   4/2/2019  12:58 AM 382885295 winre.wim
+
+
+
+
+ImageIndex       : 1
+ImageName        : Microsoft Windows Recovery Environment (x64)
+ImageDescription : Microsoft Windows Recovery Environment (x64)
+ImageSize        : 2,002,785,534 bytes
+
+
+
+
+
+ImageIndex       : 1
+ImageName        : Microsoft Windows Recovery Environment (x64)
+ImageDescription : Microsoft Windows Recovery Environment (x64)
+ImageSize        : 2,002,785,534 bytes
+WIMBoot          : False
+Architecture     : x64
+Hal              : 
+Version          : 10.0.18362.30
+SPBuild          : 30
+SPLevel          : 0
+EditionId        : WindowsPE
+InstallationType : WindowsPE
+ProductType      : WinNT
+ProductSuite     : 
+SystemRoot       : WINDOWS
+DirectoryCount   : 3548
+FileCount        : 16616
+CreatedTime      : 3/19/2019 6:12:29 AM
+ModifiedTime     : 4/2/2019 12:43:41 AM
+Languages        : en-US (Default)
+
+
+
+.
+```
+</details>
+
 Doing that from Bash environment is even simpler:
 
 ```sh
