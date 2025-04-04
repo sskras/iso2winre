@@ -86,7 +86,7 @@ if ($winre)
 
   "- Copy WinRE files here:"
   $winre | Copy-Item -Destination $out
-  Get-ChildItem -LiteralPath $out -Recurse | ft
+  Get-ChildItem -LiteralPath $out | ft
 }
 else
 {
