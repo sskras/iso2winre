@@ -97,8 +97,8 @@ else
 
 if ($interact)
 {
-"- Press <Enter> to continue and dismount the image ..."
-Read-Host
+  "- Press <Enter> to continue and dismount the image ..."
+  Read-Host
 }
 
 "- Dismount WIM/ESD:"
@@ -110,5 +110,7 @@ $wim_esd | Select-Object * | fc
 Remove-Item -Recurse -LiteralPath $mount -WhatIf
 Remove-Item -Recurse -LiteralPath $mount
 ""
+
+# TODO Dismount ISO file too.
 
 "."
