@@ -27,3 +27,12 @@ Soon I discovered that it's hard to pass the object-result on one powershell ins
 So I switched to PowerShell syntax early.
 
 For testing that I also use GNU **make** and have `GNUmakefile` recipe coming along.
+
+
+=== Usage
+
+The arguments are pretty simple:
+
+```cmd
+iso2winre.ps1 INPUT_ISO [-to OUTPUT_DIR] [-interact]
+```
