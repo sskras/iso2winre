@@ -12,6 +12,7 @@ param
   [string] $iso_full,    # Assign the ISO path name by default.
                          # no need to write `-iso_full ...`, plain `...` on the cmd-line works too.
   [string] $to,          # The output dir to store subdir with WinRE files (by default it's current dir).
+  [switch] $interact,    # Interact with the both temporary mounted images (ISO + WIM/ESD) before unmounting.
   [switch] $EOA          # End of Arguments.
 )
 
@@ -94,8 +95,11 @@ else
   ""
 }
 
+if ($interact)
+{
 "- Press <Enter> to continue and dismount the image ..."
 Read-Host
+}
 
 "- Dismount WIM/ESD:"
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
