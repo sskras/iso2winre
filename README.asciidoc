@@ -43,8 +43,9 @@ So I just run following in CMD:
 ```cmd
 powershell -file .\iso2winre.git\iso2winre.ps1 C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso -to .\extracted
 ```
-
+++++
 <details> <summary>The sample output from CMD: ...</summary>
+++++
 
 ```cmd
 - Mount the ISO image
@@ -273,7 +274,9 @@ Languages        : en-US (Default)
 
 .
 ```
+++++
 </details>
+++++
 
 Doing that from Bash environment is even simpler:
 
