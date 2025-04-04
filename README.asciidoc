@@ -1,21 +1,4 @@
 // SPDX-License-Identifier: BlueOak-1.0.0
 // SPDX-FileCopyrightText: 2023-2024 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-= `TODO` name | short description
-
-You could use this repo (and its' ancestors) as a template to generate a new repo, eg `https://github.com/USER/REPO`
-
-However the original commit history will be squashed into a new commit.
-
-To retain this history, you could execute this in the empty working dir:
-```sh
-git clone https://github.com/mirrors-git/TEMPLET-05-Added-GNUmakefile.asciidoc.git .
-git remote set-url origin https://github.com/USER/REPO.git
-git push -f -u origin main
-```
-
-\... and continue with your usual workflow.
-
-=== `TODO` Section
-
-`TODO` repo introduction
+.
