@@ -4,3 +4,16 @@
 = `iso2winre.ps1`
 
 A tool to extract `winre.wim` from Windows installation media.
+
+=== Occurence
+
+I needed to change default system UI language of an installed Windows 10 from Italian to English.
+
+Found out that it would help to have the configured `winre.wim` (Windows Recovery Environment) image in Italian replaced with an image in English.
+Before repairing the Windows, that is.
+
+For that I needed to get a different `winre.wim` file.
+Found that they reside on Windows installation `*.iso` file.
+But no direct way to extract `winre.wim` from there.
+
+Hence this tool.
