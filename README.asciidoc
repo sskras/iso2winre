@@ -17,3 +17,13 @@ Found that they reside on Windows installation `*.iso` file.
 But no direct way to extract `winre.wim` from there.
 
 Hence this tool.
+
+
+=== Writing
+
+Since I am *nix guy, I start writing Bash script on Windows (using MSYS2 env) for that.
+It was launching `powershell.exe` instances in row executing a specific cmd-let.
+Soon I discovered that it's hard to pass the object-result on one powershell instance to another.
+So I switched to PowerShell syntax early.
+
+For testing that I also use GNU **make** and have `GNUmakefile` recipe coming along.
