@@ -115,6 +115,11 @@ Remove-Item -Recurse -LiteralPath $mount
 $drive = Dismount-DiskImage -DevicePath $drive.DevicePath
 $drive
 
-# TODO Show WinRE.wim details.
+"- WinRE.wim details:"
+""
+$winre = "$out\winre.wim"
+Get-Item -LiteralPath $winre | ft
+Get-WindowsImage -ImagePath $winre | fl
+Get-WindowsImage -ImagePath $winre -Index 1 | fl
 
 "."
