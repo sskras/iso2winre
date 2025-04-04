@@ -36,3 +36,16 @@ The arguments are pretty simple:
 ```cmd
 iso2winre.ps1 INPUT_ISO [-to OUTPUT_DIR] [-interact]
 ```
+
+I am not sure about the best way to launch PS1 scripts on Windows.
+So I just run following in CMD:
+
+```cmd
+powershell -file .\iso2winre.git\iso2winre.ps1 C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso -to .\extracted
+```
+
+Doing that from Bash environment is even simpler:
+
+```sh
+./iso2winre.git/iso2winre.ps1 `cygpath -m /C/Users/Renato/Downloads/18362*.iso` -to ./extracted
+```
