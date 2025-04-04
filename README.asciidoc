@@ -44,7 +44,7 @@ So I just run following in CMD:
 powershell -file .\iso2winre.git\iso2winre.ps1 C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso -to .\extracted
 ```
 ++++
-<details> <summary>The sample output from CMD: ...</summary>
+<details> <summary>The sample output from CMD ...</summary>
 ++++
 
 ```cmd
@@ -285,7 +285,7 @@ Doing that from Bash environment is even simpler:
 ./iso2winre.git/iso2winre.ps1 `cygpath -m /C/Users/Renato/Downloads/18362*.iso` -to ./extracted
 ```
 ++++
-<details> <summary>The sample output from Bash (MSYS2): ...</summary>
+<details> <summary>The sample output from Bash (MSYS2) ...</summary>
 ++++
 ```sh
 Renato@DESKTOP-226CBKV:~/debug$ ./iso2winre.git/iso2winre.ps1 `cygpath -m /C/Users/Renato/Downloads/18362*.iso` -to ./extracted
