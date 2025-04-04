@@ -113,4 +113,6 @@ Remove-Item -Recurse -LiteralPath $mount
 
 # TODO Dismount ISO file too.
 
+# TODO Show WinRE.wim details.
+
 "."
