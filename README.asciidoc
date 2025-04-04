@@ -48,6 +48,7 @@ powershell -file .\iso2winre.git\iso2winre.ps1 C:\Users\Renato\Downloads\18362.3
 ++++
 
 ```cmd
+C:\msys64\home\Renato\debug> powershell -file .\iso2winre.git\iso2winre.ps1 C:\Users\Renato\Downloads\18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso -to .\extracted
 - Mount the ISO image
 
 
