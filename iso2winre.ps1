@@ -52,12 +52,21 @@ $installation | Select-Object FullName, Length, LastWriteTime | ft
 "- Get the install WIM/ESD info:"
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
 $wim_esd | fl
+
+"- Selected image index:"
+""
+$index = 1
+$index
+""
+
+"- Details of the selected image"
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index 1
 $wim_esd | fl
 
 if ($interact)
 {
   "- Is the chosen image OK (index $($wim_esd.ImageIndex)) ?"
+  ""
   "  Press <Enter> to continue if so."
   Read-Host
 }
