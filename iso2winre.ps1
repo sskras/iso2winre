@@ -94,9 +94,15 @@ $mount
 New-Item -ItemType Directory -Force $mount | ft
 
 "- Mount WIM/ESD:"
+""
 $log = $mount + ".log"
+$filename = $installation.FullName
+
+if ($filename -match '.wim$') {
+  "  * proceeding in WIM format"
 $wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 if ($?) { $wim_esd | Select-Object | fc }
+}
 
 "- List WIM mounts:"
 Get-WindowsImage -Mounted | fl
