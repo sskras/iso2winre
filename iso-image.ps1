@@ -14,6 +14,7 @@ param
   [switch] $info,
   [switch] $cleanup,
   [switch] $mount,
+  [switch] $dismount,
   [switch] $list,
   [switch] $EOA         # End of Arguments (a virtual argument, not intended to be actually used)
 )
@@ -102,6 +103,18 @@ if ($mount)
 
   "- Drive letters diff"
   Compare-Object ($letters_before | Select-Object) ($letters_after | Select-Object) | ft
+}
+
+if ($dismount)
+{
+  "- Details of the image"
+  Get-DiskImage -ImagePath ${iso_file} | fl
+
+  "- Dismount the ISO image"
+  Dismount-DiskImage -ImagePath ${iso_file}
+
+  "- Final optical drives"
+  Get-CimInstance Win32_LogicalDisk -Filter 'DriveType = 5' | Select-Object DeviceID, Size, VolumeName, Description | ft
 }
 
 if ($list)
