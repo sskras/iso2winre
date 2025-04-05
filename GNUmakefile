@@ -4,7 +4,7 @@
 A = An introductory description of this Makefile (a TODO).
 
 
-sample_iso = `cygpath -m /C/Users/Renato/Downloads/18362*.iso`
+sample_iso = `cygpath -m /home/Renato/debug/ISOs/18362*.iso`
 
 
 all:

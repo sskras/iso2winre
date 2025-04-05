@@ -1,6 +1,6 @@
 - Processing the image:
 
-C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+C:/msys64/home/Renato/debug/ISOs/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 
 - Cleaning up virtual drives mounted from the image:
 
@@ -11,7 +11,7 @@ Attached          : False
 BlockSize         : 0
 DevicePath        : 
 FileSize          : 4439830528
-ImagePath         : C:/Users/Renato/Downloads/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+ImagePath         : C:/msys64/home/Renato/debug/ISOs/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
 LogicalSectorSize : 2048
 Number            : 
 Size              : 4439830528
@@ -27,7 +27,7 @@ PSComputerName    :
 DriveLetter FriendlyName             FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
 ----------- ------------             -------------- --------- ------------ ----------------- -------------      ----
             Riservato per il sistema NTFS           Fixed     Healthy      OK                    544.79 MB    579 MB
-C                                    NTFS           Fixed     Healthy      OK                     80.56 GB 222.44 GB
+C                                    NTFS           Fixed     Healthy      OK                     74.81 GB 222.44 GB
                                      NTFS           Fixed     Healthy      OK                    561.93 MB    576 MB
 D                                    Unknown        CD-ROM    Healthy      Unknown                     0 B       0 B
 
