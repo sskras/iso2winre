@@ -43,9 +43,15 @@ $installation = Get-ChildItem -Path $path -Recurse -Include install.*
 $installation | Select-Object FullName, Length, LastWriteTime | ft
 ""
 
+"- The chosen image:"
+""
+# TODO: Check for 64-bit image in case of multiple matches instead of choosing the 1st one:
+$installation = $installation[0]
+$installation | Select-Object FullName, Length, LastWriteTime | ft
+
 "- Get the install WIM/ESD info:"
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
-$wim_esd | fc
+$wim_esd | fl
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index 1
 $wim_esd | fl
 
