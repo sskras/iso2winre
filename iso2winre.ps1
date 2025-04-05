@@ -100,8 +100,16 @@ $filename = $installation.FullName
 
 if ($filename -match '.wim$') {
   "  * proceeding in WIM format"
-$wim_esd = Mount-WindowsImage -ImagePath $installation.FullName -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
+  $wim_esd = Mount-WindowsImage -ImagePath $filename -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
 if ($?) { $wim_esd | Select-Object | fc }
+}
+
+if ($filename -match '.esd$') {
+  "  * proceeding in ESD format"
+  $filename
+  ""
+  "TODO. Press <Enter>"
+  Read-Host
 }
 
 "- List WIM mounts:"
