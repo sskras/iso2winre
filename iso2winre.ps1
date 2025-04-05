@@ -53,14 +53,22 @@ $installation | Select-Object FullName, Length, LastWriteTime | ft
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
 $wim_esd | fl
 
+"- Selected Windows edition:"
+""
+# TODO Rework hardcoded string into something more sensinble.
+#      Maybe just extract that from the online image.
+$edition = 'Windows 10 Pro'
+$edition
+""
+
 "- Selected image index:"
 ""
-$index = 1
+$index = ($wim_esd | Where-Object { $_.ImageName -eq $edition }).ImageIndex
 $index
 ""
 
 "- Details of the selected image"
-$wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index 1
+$wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index $index
 $wim_esd | fl
 
 if ($interact)
