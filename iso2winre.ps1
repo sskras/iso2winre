@@ -55,6 +55,13 @@ $wim_esd | fl
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index 1
 $wim_esd | fl
 
+if ($interact)
+{
+  "- Is the chosen image OK (index $($wim_esd.ImageIndex)) ?"
+  "  Press <Enter> to continue if so."
+  Read-Host
+}
+
 "- Compile mount name from image details:"
 ""
 $mount = "{0}\{1}-{2}-[{3}]-{4}" -f `
