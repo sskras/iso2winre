@@ -109,11 +109,14 @@ $log = $mount + ".log"
 $filename = $installation.FullName
 
 if ($filename -match '.esd$') {
-  "  * proceeding in ESD format"
+  "- Converting from ESD to WIM format:"
+  $esd = $filename
+  $wim = $esd.Replace('.esd', '.wim'))
   $wim_esd = Expand-WindowsImage -ImagePath $filename -Index $wim_esd.ImageIndex -ApplyPath $mount -LogPath $log -CheckIntegrity
 }
 
 if ($filename -match '.wim$') {
+  $wim = filename
   "  * proceeding in WIM format"
   $wim_esd = Mount-WindowsImage  -ImagePath $filename -Index $wim_esd.ImageIndex      -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
 }
