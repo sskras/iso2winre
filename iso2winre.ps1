@@ -83,7 +83,7 @@ $wim_esd | fl
 
 if ($interact)
 {
-  "- Is the chosen image OK (index $($wim_esd.ImageIndex)) ?"
+  "- Is the chosen image OK (index $index) ?"
   ""
   "  Press <Enter> to continue if so."
   Read-Host
@@ -103,7 +103,6 @@ $mount
 "- Create mount dir:"
 New-Item -ItemType Directory -Force $mount | ft
 
-"- Mount WIM/ESD:"
 ""
 $log = $mount + ".log"
 $filename = $installation.FullName
@@ -112,14 +111,17 @@ if ($filename -match '.esd$') {
   "- Converting from ESD to WIM format:"
   $esd = $filename
   $wim = $esd.Replace('.esd', '.wim'))
-  $wim_esd = Expand-WindowsImage -ImagePath $filename -Index $wim_esd.ImageIndex -ApplyPath $mount -LogPath $log -CheckIntegrity
+  $wim_esd = Export-WindowsImage -SourceImagePath $esd -SourceIndex $index -DestinationImagePath $wim -LogPath $log -CheckIntegrity
+  $wim_esd | select * | fl
 }
 
 if ($filename -match '.wim$') {
   $wim = filename
-  "  * proceeding in WIM format"
-  $wim_esd = Mount-WindowsImage  -ImagePath $filename -Index $wim_esd.ImageIndex      -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
 }
+
+"- Mount WIM:"
+$wim_esd = Mount-WindowsImage -ImagePath $wim -Index $index -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
+$wim_esd | Select-Object * | fc
 
 if ($?)
 {
@@ -160,20 +162,10 @@ if ($interact)
   Read-Host
 }
 
-"- Dismount WIM/ESD:"
+"- Dismount WIM:"
 
-if ($filename -match '.wim$') {
   $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
   $wim_esd | Select-Object * | fc
-}
-
-if ($filename -match '.esd$') {
-  # IIUC, Owner of the applied files and dirs is SYSTEM. We need to take ownership:
-  takeown /f "$mount" /r /d Y /skipsl
-  icacls     "$mount" /t /c /l /grant "${Env:USERDOMAIN}\${Env:USERNAME}:(F)"
-  # Via: https://www.tenforums.com/general-support/35157-dism-apply-image-remove-entire-content-directory.html#4
-  # TODO: This permissions altering code needs more than 0 iteration, it seems.
-}
 
 "- Remove mount dir:"
 ""
