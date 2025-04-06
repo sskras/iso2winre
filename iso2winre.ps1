@@ -111,7 +111,6 @@ $filename = $installation.FullName
 if ($filename -match '.wim$') {
   "  * proceeding in WIM format"
   $wim_esd = Mount-WindowsImage  -ImagePath $filename -Index $wim_esd.ImageIndex      -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
-
 }
 
 if ($filename -match '.esd$') {
@@ -119,6 +118,11 @@ if ($filename -match '.esd$') {
   $wim_esd = Expand-WindowsImage -ImagePath $filename -Index $wim_esd.ImageIndex -ApplyPath $mount -LogPath $log -CheckIntegrity
 }
 
+if ($?)
+{
+  "  * Failure:"
+  $wim_esd | Select-Object | fc
+}
 if ($?) { $wim_esd | Select-Object | fc }
 
 "- List WIM mounts:"
