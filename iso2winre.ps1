@@ -123,7 +123,6 @@ if ($?)
   "  * Failure:"
   $wim_esd | Select-Object | fc
 }
-if ($?) { $wim_esd | Select-Object | fc }
 
 "- List WIM mounts:"
 Get-WindowsImage -Mounted | fl
