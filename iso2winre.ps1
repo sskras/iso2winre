@@ -57,13 +57,18 @@ $wim_esd | fl
 ""
 # TODO Rework hardcoded string into something more sensinble.
 #      Maybe just extract that from the online image.
-$edition = 'Windows 10 Pro'
-$edition
+$editions = @(
+  'Windows 10 Pro'
+)
+$editions
 ""
 
 "- Selected image index:"
 ""
+ForEach ($edition in $editions) {
 $index = ($wim_esd | Where-Object { $_.ImageName -eq $edition }).ImageIndex
+  if ($index) { break }
+}
 $index
 ""
 
