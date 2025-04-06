@@ -59,6 +59,7 @@ $wim_esd | fl
 #      Maybe just extract that from the online image.
 $editions = @(
   'Windows 10 Pro'
+  'Windows 10 Enterprise'
 )
 $editions
 ""
@@ -66,7 +67,8 @@ $editions
 "- Selected image index:"
 ""
 ForEach ($edition in $editions) {
-$index = ($wim_esd | Where-Object { $_.ImageName -eq $edition }).ImageIndex
+  $index = ($wim_esd | Where-Object { $_.ImageName -eq $edition }).ImageIndex
+
   if ($index) { break }
 }
 $index
@@ -106,7 +108,8 @@ $filename = $installation.FullName
 if ($filename -match '.wim$') {
   "  * proceeding in WIM format"
   $wim_esd = Mount-WindowsImage -ImagePath $filename -Index $wim_esd.ImageIndex -ReadOnly -Path $mount -LogPath $log -CheckIntegrity -Optimize
-if ($?) { $wim_esd | Select-Object | fc }
+
+  if ($?) { $wim_esd | Select-Object | fc }
 }
 
 if ($filename -match '.esd$') {
