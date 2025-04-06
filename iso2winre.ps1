@@ -159,8 +159,11 @@ if ($interact)
 }
 
 "- Dismount WIM/ESD:"
+
+if ($filename -match '.wim$') {
 $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
 $wim_esd | Select-Object * | fc
+}
 
 "- Remove mount dir:"
 ""
