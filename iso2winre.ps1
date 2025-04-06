@@ -108,7 +108,7 @@ $log = $mount + ".log"
 $filename = $installation.FullName
 
 if ($filename -match '.esd$') {
-  "- Converting from ESD to WIM format:"
+  "- Convert from ESD to WIM format:"
   $esd = $filename
   $wim = $esd.Replace('.esd', '.wim'))
   $wim_esd = Export-WindowsImage -SourceImagePath $esd -SourceIndex $index -DestinationImagePath $wim -LogPath $log -CheckIntegrity
@@ -116,18 +116,18 @@ if ($filename -match '.esd$') {
 }
 
 if ($filename -match '.wim$') {
-  $wim = filename
+  $wim = $filename
 }
 
 "- Mount WIM:"
 $wim_esd = Mount-WindowsImage -ImagePath $wim -Index $index -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
-$wim_esd | Select-Object * | fc
 
 if ($?)
 {
   "  * Failure:"
-  $wim_esd | Select-Object | fc
 }
+
+$wim_esd | Select-Object * | fc
 
 "- List WIM mounts:"
 Get-WindowsImage -Mounted | fl
@@ -164,8 +164,8 @@ if ($interact)
 
 "- Dismount WIM:"
 
-  $wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
-  $wim_esd | Select-Object * | fc
+$wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
+$wim_esd | Select-Object * | fc
 
 "- Remove mount dir:"
 ""
