@@ -108,14 +108,14 @@ New-Item -ItemType Directory -Force $mount | ft
 $log = $mount + ".log"
 $filename = $installation.FullName
 
-if ($filename -match '.wim$') {
-  "  * proceeding in WIM format"
-  $wim_esd = Mount-WindowsImage  -ImagePath $filename -Index $wim_esd.ImageIndex      -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
-}
-
 if ($filename -match '.esd$') {
   "  * proceeding in ESD format"
   $wim_esd = Expand-WindowsImage -ImagePath $filename -Index $wim_esd.ImageIndex -ApplyPath $mount -LogPath $log -CheckIntegrity
+}
+
+if ($filename -match '.wim$') {
+  "  * proceeding in WIM format"
+  $wim_esd = Mount-WindowsImage  -ImagePath $filename -Index $wim_esd.ImageIndex      -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
 }
 
 if ($?)
