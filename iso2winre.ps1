@@ -55,11 +55,12 @@ $wim_esd | fl
 
 "- Prefered Windows editions:"
 ""
-# TODO Rework hardcoded string into something more sensinble.
+# TODO with hardcoded strings something more sensinble.
 #      Maybe just extract that from the online image.
 $editions = @(
   'Windows 10 Pro'
   'Windows 10 Enterprise'
+  'Windows 10 Enterprise Evaluation'
 )
 $editions
 ""
