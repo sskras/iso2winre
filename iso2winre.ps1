@@ -112,6 +112,10 @@ if ($filename -match '.esd$') {
   ""
   $esd = $filename
   $wim = $esd -replace ('^.+\\', ($to+'\')) -replace ('.esd', '.wim')
+  ""
+  "  * `$esd = $esd"
+  "  * `$wim = $wim"
+  ""
   $wim_esd = Export-WindowsImage -SourceImagePath $esd -SourceIndex $index -DestinationImagePath $wim -LogPath $log -CheckIntegrity
   $wim_esd | select * | fl
   # Since we create a new .wim file, it will contain the single volume image only. Hence:
