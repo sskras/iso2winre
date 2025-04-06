@@ -164,10 +164,18 @@ if ($filename -match '.wim$') {
   $wim_esd | Select-Object * | fc
 }
 
+if ($filename -match '.esd$') {
+  # IIUC, Owner of the applied files and dirs is SYSTEM. We need to take ownership:
+  takeown /f "$mount" /r /d Y /skipsl
+  icacls     "$mount" /t /c /l /grant "${Env:USERDOMAIN}\${Env:USERNAME}:(F)"
+  # Via: https://www.tenforums.com/general-support/35157-dism-apply-image-remove-entire-content-directory.html#4
+  # TODO: This permissions altering code needs more than 0 iteration, it seems.
+}
+
 "- Remove mount dir:"
 ""
 Remove-Item -Recurse -LiteralPath $mount -WhatIf
-Remove-Item -Recurse -LiteralPath $mount
+Remove-Item -Recurse -LiteralPath $mount -ErrorAction SilentlyContinue -Verbose
 ""
 
 "- Dismount ISO file:"
