@@ -53,7 +53,7 @@ $installation | Select-Object FullName, Length, LastWriteTime | ft
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName
 $wim_esd | fl
 
-"- Selected Windows edition:"
+"- Prefered Windows editions:"
 ""
 # TODO Rework hardcoded string into something more sensinble.
 #      Maybe just extract that from the online image.
@@ -64,15 +64,17 @@ $editions = @(
 $editions
 ""
 
-"- Selected image index:"
-""
 ForEach ($edition in $editions) {
   $index = ($wim_esd | Where-Object { $_.ImageName -eq $edition }).ImageIndex
 
   if ($index) { break }
 }
-$index
-""
+
+if (!$index)
+{
+  "- No matching Windows edition (flavor) found."
+  exit 2
+}
 
 "- Details of the selected image"
 $wim_esd = Get-WindowsImage -ImagePath $installation.FullName -Index $index
