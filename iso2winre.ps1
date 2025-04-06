@@ -55,8 +55,6 @@ $wim_esd | fl
 
 "- Prefered Windows editions:"
 ""
-# TODO with hardcoded strings something more sensinble.
-#      Maybe just extract that from the online image.
 $editions = @(
   'Windows 10 Pro'
   'Windows 10 Enterprise'
@@ -70,6 +68,8 @@ ForEach ($edition in $editions) {
 
   if ($index) { break }
 }
+# TODO with hardcoded strings something more sensinble.
+#      Maybe compare them with the value extracted from the online image.
 
 if (!$index)
 {
