@@ -177,6 +177,11 @@ if ($interact)
   Read-Host
 }
 
+"- Dismount WIM:"
+
+$wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
+$wim_esd | Select-Object * | fc
+
 if ($temp_dir)
 {
   "- Remove temporary WIM dir:"
@@ -184,11 +189,6 @@ if ($temp_dir)
   Remove-Item -Force -LiteralPath $temp_dir -Recurse -WhatIf
   Remove-Item -Force -LiteralPath $temp_dir -Recurse -Verbose
 }
-
-"- Dismount WIM:"
-
-$wim_esd = Dismount-WindowsImage -Discard -Path $mount -LogPath $log
-$wim_esd | Select-Object * | fc
 
 "- Remove mount dir:"
 ""
