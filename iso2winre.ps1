@@ -140,7 +140,7 @@ if ($filename -match '.wim$') {
 
 "- Mount WIM:"
 $wim_esd = Mount-WindowsImage -ImagePath $wim -Index $index -Path $mount -LogPath $log -CheckIntegrity -ReadOnly -Optimize
-if ($?) { "  * Failure:" }
+if (!$?) { "  * Failure:" }
 $wim_esd | Select-Object * | fc
 
 "- List WIM mounts:"
