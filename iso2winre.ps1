@@ -181,8 +181,8 @@ if ($temp_dir)
 {
   "- Remove temporary WIM dir:"
   ""
-  Remove-Item -Force $temp_dir -Recurse -WhatIf
-  Remove-Item -Force $temp_dir -Recurse -Verbose
+  Remove-Item -Force -LiteralPath $temp_dir -Recurse -WhatIf
+  Remove-Item -Force -LiteralPath $temp_dir -Recurse -Verbose
 }
 
 "- Dismount WIM:"
