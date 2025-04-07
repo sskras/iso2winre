@@ -156,9 +156,10 @@ $winre | ft
 
 if ($winre)
 {
-  "- Create the output dir (in any):"
+  "- Output dir:"
   $out = $mount + ".WinRE\"
   New-Item -ItemType Directory -Force $out | ft
+  Get-ChildItem -LiteralPath $mount | ft
 
   "- Copy WinRE files here:"
   $winre | Copy-Item -Destination $out
