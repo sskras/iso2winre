@@ -113,7 +113,9 @@ if ($filename -match '.esd$') {
   $temp_dir = "$mount.temp\"
   New-Item -ItemType Directory -Force $temp_dir | ft
   $esd = $filename
-  $wim = $esd -replace ('^.+\\', $temp_dir) -replace ('.esd', '.wim')
+  $wim = $esd `
+      -replace ('.+\\', $temp_dir) `
+      -replace ('\.esd$', '.wim')
   ""
   "  * `$esd = $esd"
   "  * `$wim = $wim"
