@@ -157,7 +157,7 @@ $winre | ft
 if ($winre)
 {
   "- Output dir:"
-  $out = $mount + ".WinRE\"
+  $out = $mount + ".RE\"
   New-Item -ItemType Directory -Force $out | ft
   Get-ChildItem -LiteralPath $mount | ft
 
