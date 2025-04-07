@@ -110,8 +110,10 @@ $filename = $installation.FullName
 if ($filename -match '.esd$') {
   "- Convert from ESD to WIM format:"
   ""
+  $temp_dir = "$mount.temp\"
+  New-Item -ItemType Directory -Force $temp_dir | ft
   $esd = $filename
-  $wim = $esd -replace ('^.+\\', ($to+'\')) -replace ('.esd', '.wim')
+  $wim = $esd -replace ('^.+\\', $temp_dir) -replace ('.esd', '.wim')
   ""
   "  * `$esd = $esd"
   "  * `$wim = $wim"
